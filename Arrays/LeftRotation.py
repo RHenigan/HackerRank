@@ -2,9 +2,10 @@
 
 
 def rotLeft(arr, d):
-    for i in range(d):
-        arr.append(arr[0])
-        arr.pop(0)
+    output = []
+    for i in range(len(arr)):
+        newIndex = (i - d) % len(arr)
+        output.insert(newIndex, arr[i])
     print(arr)
 
 if __name__ == '__main__':
